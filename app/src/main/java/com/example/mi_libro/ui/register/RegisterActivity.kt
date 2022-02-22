@@ -1,10 +1,11 @@
-package com.example.mi_libro
+package com.example.mi_libro.ui.register
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mi_libro.databinding.ActivityRegisterBinding
+import com.example.mi_libro.ui.login.LoginActivity
 
 
 class RegisterActivity : AppCompatActivity() {

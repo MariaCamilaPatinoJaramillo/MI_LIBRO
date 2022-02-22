@@ -12,13 +12,13 @@ package="com.example.mi_libro">
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
     <activity
-        android:name=".RegisterActivity"
+        android:name=".ui.register.RegisterActivity"
         android:exported="false" />
     <activity
-        android:name=".LoginActivity"
+        android:name=".ui.login.LoginActivity"
         android:exported="false" />
     <activity
-        android:name=".SplashActivity"
+        android:name=".ui.splash.SplashActivity"
         android:exported="true"
         android:theme="@style/AppTheme.Splash">
         <intent-filter>
@@ -28,7 +28,7 @@ package="com.example.mi_libro">
         </intent-filter>
     </activity>
     <activity
-        android:name=".MainActivity"
+        android:name=".ui.main.MainActivity"
         android:exported="true" />
 </application>
 </manifest>

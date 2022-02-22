@@ -1,4 +1,4 @@
-package com.example.mi_libro
+package com.example.mi_libro.ui.main
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -8,7 +8,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mi_libro.R
 import com.example.mi_libro.databinding.ActivityMainBinding
+import com.example.mi_libro.ui.login.LoginActivity
 
 import java.text.SimpleDateFormat
 import java.util.*
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
 
         //     val nameBookEditText : EditText = findViewById(R.id.name_book_edit_text)
-
+/*
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, month)
@@ -101,7 +103,7 @@ class MainActivity : AppCompatActivity() {
                         )
                 }
             }
-        }
+        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
