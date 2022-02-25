@@ -20,7 +20,7 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         listBinding = FragmentListBinding.inflate(inflater, container, false)
-        listViewModel = ViewModelProvider(this).get(listViewModel::class.java)
+        listViewModel = ViewModelProvider(this)[ListViewModel::class.java]
         return listBinding.root
     }
 
@@ -32,3 +32,4 @@ class ListFragment : Fragment() {
         }
 
     }
+//findNavController().navigate(ListFragmentDirections.actionListFragmentToNewBookFragment())}
