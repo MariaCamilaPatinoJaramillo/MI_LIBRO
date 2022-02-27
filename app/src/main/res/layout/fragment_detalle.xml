@@ -8,10 +8,26 @@
     tools:context=".ui.detalle.DetalleFragment">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/name_book_text_view"
+        style="@style/TextViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="123dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/example_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/author_text_view"
+        style="@style/TextViewSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/example_author"
+        app:layout_constraintTop_toBottomOf="@+id/name_book_text_view"
+        tools:layout_editor_absoluteX="139dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

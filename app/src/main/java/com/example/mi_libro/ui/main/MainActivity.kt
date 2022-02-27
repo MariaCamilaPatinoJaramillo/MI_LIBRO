@@ -124,33 +124,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("state","onStart")
-    }
 
-    override fun onResume() {
-        super.onResume()
-        Log.d("state","onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("state","onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("state","onStop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("state","onDestroy")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("state","onRestart")
-    }
 }

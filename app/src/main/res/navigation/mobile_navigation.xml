@@ -9,7 +9,11 @@
         android:id="@+id/newBookFragment"
         android:name="com.example.mi_libro.ui.newbook.NewBookFragment"
         android:label="NewBookFragment"
-        tools:layout="@layout/fragment_new_book" />
+        tools:layout="@layout/fragment_new_book" >
+        <action
+            android:id="@+id/action_newBookFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.mi_libro.ui.list.ListFragment"
@@ -18,5 +22,14 @@
         <action
             android:id="@+id/action_listFragment_to_newBookFragment"
             app:destination="@id/newBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.mi_libro.ui.detalle.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" >
+        <argument
+            android:name="book"
+            app:argType="com.example.mi_libro.ui.model.Book" />
     </fragment>
 </navigation>

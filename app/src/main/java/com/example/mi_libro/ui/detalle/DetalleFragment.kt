@@ -6,27 +6,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.example.mi_libro.R
+import com.example.mi_libro.databinding.FragmentDetalleBinding
 
 class DetalleFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = DetalleFragment()
-    }
-
-    private lateinit var viewModel: DetalleViewModel
+    private lateinit var detalleBinding: FragmentDetalleBinding
+    private lateinit var detalleViewModel: DetalleViewModel
+    private val args: DetalleFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_detalle, container, false)
+        detalleBinding= FragmentDetalleBinding.inflate(inflater, container, false)
+        detalleViewModel=ViewModelProvider(this,)[DetalleViewModel::class.java]
+        return detalleBinding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DetalleViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val book=args.book
+
+        with (detalleBinding){
+            nameBookTextView.text=book.name
+            authorTextView.text=book.author
+        }
+
+
+        }
+
 
 }
